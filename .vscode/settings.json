@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "blackjack.h": "c",
+        "string.h": "c"
+    }
+}
