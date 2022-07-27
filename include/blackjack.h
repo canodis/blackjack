@@ -48,9 +48,12 @@ t_cards	*new_card(int value, char name);
 
 int		player_first(t_game *game);
 int		player_takes(t_game *game, int player_sum, int dealer_sum, bool *is_playing);
+void	player_win(t_game *game, int player_sum, int dealer_sum);
 
 int		dealer_first(t_game *game);
 void	dealers_turn(t_game *game, int dealer_sum, int player_sum);
+void	dealer_win(t_game *game, int player_sum, int dealer_sum);
+
 void	init_cards(t_cards	**all_cards);
 
 
