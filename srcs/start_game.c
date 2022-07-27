@@ -45,7 +45,10 @@ void	play(t_game *game, int player_sum, int dealer_sum)
 			dealers_turn(game, dealer_sum, player_sum);
 		}
 		else if (!strcmp(input,"3"))
+		{
+			free_cards(&game->cards);
 			exit(0);
+		}
 		else
 			printf("\033[0;31mPlease enter a valid value !\n\033[0;37m");
 		if (player_sum > 21)
@@ -63,6 +66,13 @@ void	start_game(t_game *game)
 	int		player_sum;
 	while(1)
 	{
+		if(game->card_count < 10)
+		{
+			printf("\n\033[0;31mDestelerde kart kalmadi deste kariliyor...\033[0;37m\n");
+			init_cards(&game->cards);
+			game->card_count += 104;
+			sleep(3);
+		}
 		game->player_is_a = false;
 		game->dealer_is_a = false;
 		dealer_sum = dealer_first(game);

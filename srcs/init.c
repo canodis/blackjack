@@ -28,20 +28,20 @@ t_cards	*new_card(int value, char name)
 
 void	init_cards(t_cards	**all_cards)
 {
-	for (int i = 0; i < 4; i++)
+	for (int i = 0; i < 8; i++)
 		ft_lstadd_back(all_cards, new_card(1, 'A'));
 	for(int i = 1; i < 9; i++)
 	{
-		for (int j = 0; j < 4; j++)
+		for (int j = 0; j < 8; j++)
 			ft_lstadd_back(all_cards, new_card(i + 1, i + 49));
 	}
-	for(int i = 0; i < 4; i++)
+	for(int i = 0; i < 8; i++)
 		ft_lstadd_back(all_cards, new_card(10, 't'));
-	for(int i = 0; i < 4; i++)
+	for(int i = 0; i < 8; i++)
 		ft_lstadd_back(all_cards, new_card(10, 'j'));
-	for(int i = 0; i < 4; i++)
+	for(int i = 0; i < 8; i++)
 		ft_lstadd_back(all_cards, new_card(10, 'q'));
-	for(int i = 0; i < 4; i++)
+	for(int i = 0; i < 8; i++)
 		ft_lstadd_back(all_cards, new_card(10, 'k'));
 }
 
@@ -52,6 +52,6 @@ void	init_all(t_game *game)
 	game->dcards = NULL;
 	game->player_is_a = false;
 	game->dealer_is_a = false;
-	game->card_count = 52;
+	game->card_count = 104;
 	init_cards(&game->cards);
 }

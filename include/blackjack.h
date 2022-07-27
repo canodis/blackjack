@@ -51,6 +51,7 @@ int		player_takes(t_game *game, int player_sum, int dealer_sum, bool *is_playing
 
 int		dealer_first(t_game *game);
 void	dealers_turn(t_game *game, int dealer_sum, int player_sum);
+void	init_cards(t_cards	**all_cards);
 
 
 #endif
