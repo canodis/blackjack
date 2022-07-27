@@ -47,7 +47,7 @@ void	ft_lstadd_back(t_cards **lst, t_cards *new);
 t_cards	*new_card(int value, char name);
 
 int		player_first(t_game *game);
-int		player_takes(t_game *game, int player_sum);
+int		player_takes(t_game *game, int player_sum, int dealer_sum, bool *is_playing);
 
 int		dealer_first(t_game *game);
 void	dealers_turn(t_game *game, int dealer_sum, int player_sum);

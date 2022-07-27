@@ -1,5 +1,16 @@
 #include "../include/blackjack.h"
 
+char colors[7][10] =
+{
+	{"\033[0;31m"},
+	{"\033[0;32m"},
+	{"\033[0;33m"},
+	{"\033[0;34m"},
+	{"\033[0;35m"},
+	{"\033[0;36m"},
+	{"\033[0;37m"}
+};
+
 void	delete_card(t_cards **lst, t_cards *card)
 {
 	t_cards	*tmp;
@@ -62,7 +73,9 @@ void	free_cards(t_cards **cards)
 
 void	print_cards(t_cards *cards, bool isPrivate)
 {
+	printf("\n");
 	char	n;
+	int		color_i = random_range(0,6);
 	int		cards_len = 0;
 	t_cards	*tmp = cards;
 	while (tmp)
@@ -72,6 +85,7 @@ void	print_cards(t_cards *cards, bool isPrivate)
 	}
 	for (int i = 0; i < 6; i++)
 	{
+		printf("%s*  \033[0;37m",colors[color_i]);
 		tmp = cards;
 		for (int j = 0; j < cards_len; j++)
 		{
@@ -100,6 +114,7 @@ void	print_cards(t_cards *cards, bool isPrivate)
 				tmp = tmp->next;
 			}
 		}
+		printf("%s*  \033[0;37m",colors[color_i]);
 		printf("\n");
 	}
 	printf("\n");
