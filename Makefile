@@ -1,5 +1,6 @@
-CC = gcc
-SRCS = srcs/main.c srcs/init.c srcs/free_game.c srcs/start_game.c srcs/random_range.c
+CC = gcc -g
+SRCS = srcs/main.c srcs/init.c srcs/free_game.c srcs/start_game.c srcs/random_range.c\
+srcs/dealer.c srcs/card_things.c srcs/utils.c srcs/player.c
 NAME = blackjack
 Color_s = \033[92m
 Color_e = \033[0m

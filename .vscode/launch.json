@@ -5,15 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) launch",
-            "type": "cppdbg",
+            "type": "lldb",
             "request": "launch",
-            "program": "${workspaceRoot}/blackjack",
+            "name": "Debug",
+            "program": "${workspaceFolder}/blackjack",
             "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "externalConsole": true,
-            "MIMode": "gdb"
+            "cwd": "${workspaceFolder}"
         }
     ]
 }

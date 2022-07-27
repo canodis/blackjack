@@ -1,0 +1,12 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory `/Users/rtosun/Desktop/blackjack'
+ 
+echo "\033[92m.------. .------. .------. .------. .------. .------. .------."
+echo "|\x1B[31mC\033[92m.--. | |\x1B[33mA\033[92m.--. | |\x1B[34mN\033[92m.--. | |\x1B[35mO\033[92m.--. | |\x1B[36mD\033[92m.--. | |\x1B[37mI\033[92m.--. | |\x1b[31mS\033[92m.--. |"
+echo "| :/\: | | (\/) | | :(): | | :/\: | | :/\: | | (\/) | | :/\: |"
+echo "| :\/: | | :\/: | | ()() | | :\/: | | (__) | | :\/: | | :\/: |"
+echo "| '--'\x1B[31mC\033[92m| | '--'\x1B[33mA\033[92m| | '--'\x1B[34mN\033[92m| | '--'\x1B[35mO\033[92m| | '--'\x1B[36mD\033[92m| | '--'\x1B[37mI\033[92m| | '--'\x1b[31mS\033[92m|"
+echo "\`------' \`------' \`------' \`------' \`------' \`------' \`------'\\033[0m"
+gcc -g srcs/main.c srcs/init.c srcs/free_game.c srcs/start_game.c srcs/random_range.c srcs/dealer.c srcs/card_things.c srcs/utils.c srcs/player.c -o blackjack -lreadline
+make: Leaving directory `/Users/rtosun/Desktop/blackjack'
+ 
