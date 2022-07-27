@@ -55,13 +55,16 @@ int	player_takes(t_game *game, int player_sum, int dealer_sum, bool *is_playing)
 
 void	player_win(t_game *game, int player_sum, int dealer_sum)
 {
-	printf("\033[0;34mDealer's cards : \033[0;37m  %i  \n", dealer_sum);
-	print_cards(game->dcards, false);
-	printf("\033[0;34mPlayer's cards : \033[0;37m  %i  \n", player_sum);
-	print_cards(game->pcards, false);
-	sleep(2);
+	sleep(1);
 	if (player_sum == dealer_sum)
+	{
+		printf("\033[0;34mDealer's cards : \033[0;37m  %i  \n", dealer_sum);
+		print_cards(game->dcards, false);
+		printf("\033[0;34mPlayer's cards : \033[0;37m  %i  \n", player_sum);
+		print_cards(game->pcards, false);
 		printf("\nDRAW\n");
+		sleep(1);
+	}
 	else
 		dealers_turn(game, dealer_sum, player_sum);
 	free_cards(&game->dcards);

@@ -11,6 +11,9 @@
 # include <stdbool.h>
 # include <unistd.h>
 
+extern int win;
+extern int lose;
+
 typedef struct s_cards
 {
 	int				value;
